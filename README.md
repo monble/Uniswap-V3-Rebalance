@@ -5,11 +5,7 @@ Install Foundry
 ```
 https://book.getfoundry.sh/
 ```
-To utilize the contracts and deploy to a local testnet, you can install the code in your repo with forge:
-```
-forge install https://github.com/monble/UniswapV3Rebalance/
-```
-You can manage tests in ..src/Rebalance.t.sol
+You can manage tests in ```..src/Rebalance.t.sol```
 ```solidity
     import {Test, console} from "forge-std/Test.sol";
     import {Rebalance} from "src/Rebalance.sol";
@@ -60,7 +56,7 @@ Run in terminal:
 forge test --fork-url https://rpc.ankr.com/optimism -vvvv
 ```
 ### Settings
-You can change settings in ..src/Rebalance.sol
+You can change settings in ```..src/Rebalance.sol```
 ```solidity
 address public constant univ3Router = 0xE592427A0AEce92De3Edee1F18E0157C05861564;
 address public constant oneinch = 0x1111111254EEB25477B68fb85Ed929f73A960582;
@@ -69,10 +65,10 @@ IUniswapV3Pool public pool = IUniswapV3Pool(0x1fb3cf6e48F1E7B10213E7b6d87D4c073C
 ```
 
 ### Action List
-1. Change the values of pool, nftManager, univ3Router addresses
-2. Deploy smart-contract on any EVM network with Solidity compiler version 0.8.13
-3. Call initialize() function
-4. Send one of tokens to Rebalance contract.
-5. Get tickNow from slot() Rebalance
-6. Call rebalance(tickLower, tickUpper) where tickLower may be = tickNow - 500 and tickUpper may be = tickNow + 500
-7. Call withdraw(tickLower, tickUpper) where tickLower may be = tickNow - 500 and tickUpper may be = tickNow + 500M
+1. Change the values of ```pool, nftManager, univ3Router``` addresses
+2. Deploy smart-contract on any EVM network with Solidity compiler version ```0.8.13```
+3. Call ```initialize()``` function
+4. Send one of tokens to ```Rebalance``` contract.
+5. Get tickNow from ```slot()``` Rebalance
+6. Call ```rebalance(tickLower, tickUpper)``` where tickLower may be = ```tickNow - 500``` and tickUpper may be = ```tickNow + 500```
+7. Call ```withdraw(tickLower, tickUpper)``` where tickLower may be = ```tickNow - 500``` and tickUpper may be = ```tickNow + 500```
