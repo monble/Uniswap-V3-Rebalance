@@ -5,7 +5,7 @@ import {Test, console} from "forge-std/Test.sol";
 import {Rebalance} from "src/Rebalance.sol";
 import {IERC20} from "src/additions/erc20.sol";
 
-contract CounterTest is Test {
+contract RebalanceTest is Test {
     Rebalance public rebalance;
 
     function setUp() public {
