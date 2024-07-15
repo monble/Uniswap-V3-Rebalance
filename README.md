@@ -10,7 +10,7 @@ To utilize the contracts and deploy to a local testnet, you can install the code
 forge install https://github.com/monble/UniswapV3Rebalance/
 ```
 You can manage tests in ..src/Rebalance.t.sol
-
+```solidity
     import {Test, console} from "forge-std/Test.sol";
     import {Rebalance} from "src/Rebalance.sol";
     import {IERC20} from "src/additions/erc20.sol";
@@ -53,7 +53,7 @@ You can manage tests in ..src/Rebalance.t.sol
             assertEq(address(rebalance.token1()),0x68f180fcCe6836688e9084f035309E29Bf0A2095);
         }
     }
-
+```
 To run tests you need to use a fork of the OP Mainnet network
 Run in terminal: 
 ```
@@ -61,7 +61,7 @@ forge test --fork-url https://rpc.ankr.com/optimism -vvvv
 ```
 ### Settings
 You can change settings in ..src/Rebalance.sol
-```
+```solidity
 address public constant univ3Router = 0xE592427A0AEce92De3Edee1F18E0157C05861564;
 address public constant oneinch = 0x1111111254EEB25477B68fb85Ed929f73A960582;
 IUniswapV3PositionsNFT public constant nftManager = IUniswapV3PositionsNFT(0xC36442b4a4522E871399CD717aBDD847Ab11FE88);
